@@ -1,6 +1,6 @@
-public class PolinomFunction extends Function {
+public class PolynomFunction extends Function {
 
-    PolinomFunction(int order){
+    PolynomFunction(int order){
         this.order=order;
 
         for (int i=0;i<=order;i++){
