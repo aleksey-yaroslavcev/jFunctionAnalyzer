@@ -1,8 +1,11 @@
 package ru.pp.yarik.FunctionAnalyzer;
 
 public class CubePolynomFunction extends PolynomFunction{
+    static final String DESCRIPTION="Cube polynomial function";
+    static final int CUBE_ORDER=3;
+
     CubePolynomFunction() {
-        super(3);
-        description="Cube polynomial function";
+        super(CUBE_ORDER);
+        setDescription(DESCRIPTION);
     }
 }
