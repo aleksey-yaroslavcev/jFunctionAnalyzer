@@ -1,3 +1,5 @@
+package ru.pp.yarik.FunctionAnalyzer;
+
 public class SquarePolynomFuction extends PolynomFunction {
     SquarePolynomFuction() {
         super(2);

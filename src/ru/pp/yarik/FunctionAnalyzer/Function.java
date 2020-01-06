@@ -1,3 +1,5 @@
+package ru.pp.yarik.FunctionAnalyzer;
+
 import java.util.ArrayList;
 
 public abstract class Function {

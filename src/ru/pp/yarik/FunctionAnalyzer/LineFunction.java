@@ -1,3 +1,5 @@
+package ru.pp.yarik.FunctionAnalyzer;
+
 public class LineFunction extends PolynomFunction {
 
     LineFunction() {

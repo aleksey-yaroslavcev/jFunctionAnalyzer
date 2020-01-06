@@ -1,3 +1,5 @@
+package ru.pp.yarik.FunctionAnalyzer;
+
 public class PolynomFunction extends Function {
 
     PolynomFunction(int order){

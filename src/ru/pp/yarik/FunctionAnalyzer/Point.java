@@ -1,3 +1,5 @@
+package ru.pp.yarik.FunctionAnalyzer;
+
 public final class Point {
     private final double x;
     private final double y;
