@@ -2,8 +2,8 @@ import java.util.ArrayList;
 
 public abstract class Function {
 
-    public abstract double value(double x);
-    public double[] values(double x1, double x2, double step){
+    public abstract double value(double x) throws Exception;
+    public double[] values(double x1, double x2, double step) throws Exception {
         int count=1 + (int) ((x2-x1)/step);
         double[] result=new double[count];
         for(int i=0;i<count;i++){
@@ -13,7 +13,7 @@ public abstract class Function {
         return result;
     }
 
-    public Point point(double x){
+    public Point point(double x) throws Exception {
         return new Point(x,value(x));
     }
 
@@ -36,6 +36,14 @@ public abstract class Function {
         }
         paramNames.add(name);
         paramValues.add(value);
+    }
+    public double getParam(final String name) throws Exception {
+        for (int i=0;i<paramNames.size();i++){
+            if (paramNames.get(i).equals(name)){
+                return paramValues.get(i).doubleValue();
+            }
+        }
+        throw new Exception("No such parameter");
     }
 
     protected ArrayList<String> paramNames;
