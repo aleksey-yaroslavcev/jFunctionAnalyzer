@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 public abstract class Function {
 
+    static final String NO_SUCH_PARAM_MESSAGE="No such parameter";
+
     public abstract double value(double x) throws Exception;
     public double[] values(double x1, double x2, double step) throws Exception {
         int count=1 + (int) ((x2-x1)/step);
@@ -28,6 +30,9 @@ public abstract class Function {
     public String getDescription() {
         return description;
     }
+    protected void setDescription(String description) {
+        this.description = description;
+    }
 
     public void setParam(final String name, double value){
         for (String paramName:paramNames){
@@ -45,10 +50,10 @@ public abstract class Function {
                 return paramValues.get(i).doubleValue();
             }
         }
-        throw new Exception("No such parameter");
+        throw new Exception(NO_SUCH_PARAM_MESSAGE);
     }
 
-    protected ArrayList<String> paramNames;
-    protected ArrayList<Double> paramValues;
-    protected String description;
+    private ArrayList<String> paramNames;
+    private ArrayList<Double> paramValues;
+    private String description;
 }
